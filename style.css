@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+  --blue: steelblue;
+}
+html {
+  font-family: 'Roboto';
+  background-color: #202124;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 600px;
+}
+
+.cell {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 96px;
+  font-weight: 700;
+  color: var(--blue);
+  /* outline: 5px solid green; */
+}
+
+#c0,
+#c1,
+#c2 {
+  border-bottom: 5px solid var(--blue);
+}
+#c6,
+#c7,
+#c8 {
+  border-top: 5px solid var(--blue);
+}
+#c0,
+#c3,
+#c6 {
+  border-right: 5px solid var(--blue);
+}
+#c2,
+#c5,
+#c8 {
+  border-left: 5px solid var(--blue);
+}
+
+.btn {
+  background-color: var(--blue);
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+h1 {
+  color: var(--blue);
+  font-size: 40px;
+  /* font-weight: 700; */
+}
+
+.text {
+  color: var(--blue);
+  font-size: 28px;
+}
+
+@media (max-width: 390px) {
+  .grid {
+    width: 390px;
+    height: 390px;
+  }
+  .cell {
+    width: 130px;
+    height: 130px;
+    font-size: 64px;
+  }
+}
+
+* {
+  user-select: none;
+}
