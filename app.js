@@ -33,7 +33,7 @@ function playGame() {
     text.textContent = `${this.textContent} Player Won`
     gameOver()
   }
-  if (i === 8) {
+  if (!isVictory(cells) && i === 8) {
     text.textContent = `It's a tie`
   }
 
